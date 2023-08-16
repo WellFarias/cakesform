@@ -1,0 +1,68 @@
+@body-color: #EBF6FC;
+@primary-color: #24457B;
+@secondary-color: #9E7933;
+@placeholder-color: #5E93CF;
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background-color: @body-color !important;
+}
+
+.content {
+  width: 50%;
+  margin: auto;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  h3, p, label {
+    color: @primary-color !important;
+  }
+  
+  .gap {
+    gap: 16px;
+  }
+  
+  .text-field {
+    width: 100%;
+    border: 1px solid #9E7933;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: .8rem 1.25rem;
+    outline-color: @secondary-color;
+    &::placeholder {
+      color: @placeholder-color;
+    }
+    &.error {
+      border: 2px solid red !important;
+    }
+  }
+  
+  .btn-custom {
+    background-color: @primary-color;
+    color: #fff;
+    border-radius: 50px !important;
+    padding: 10px 32px 10px 32px !important;
+  }
+  
+  .cakes-group {
+    position: relative;
+    .cake-options {
+      #cake-error {
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        padding: 0 1rem;
+      }
+    }
+  }
+  
+  .error {
+    color: red !important;
+  }
+}
+
+
